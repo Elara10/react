@@ -5,27 +5,37 @@ export default function TextForm(props) {
         //   console.log("Uppercase was clicked" + text);
           let newText=text.toUpperCase();
           setText(newText)
+          props.showAlert("Converted to uppercase!","success");
         }
         const handleLowClick=()=>{
           //   console.log("Uppercase was clicked" + text);
             let newText=text.toLowerCase();
             setText(newText)
+            props.showAlert("Converted to lowercase!","success");
+
           }
           const handleClearClick=()=>{
             //   console.log("Uppercase was clicked" + text);
               let newText=" ";
               setText(newText)
+              props.showAlert("Text cleared!","success");
+
             }
             const handleCopy=()=>{
               //   console.log("Uppercase was clicked" + text);
               var text=document.getElementById("myBox");
               text.select();
               navigator.clipboard.writeText(text.value);
+              props.showAlert("Copied to clipboard!","success");
+
               }
               const handleExtraspaces=()=>{
                 //   console.log("Uppercase was clicked" + text);
                   let newText=text.split(/[ ]+/);
                   setText(newText.join(" "))
+                  props.showAlert("Converted to uppercase!","success");
+                  props.showAlert("Extra spaces removed!","success");
+
                 }
         const handleOnChange=(event)=>{
             // console.log("On change");
