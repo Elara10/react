@@ -57,6 +57,7 @@ else{
  <TextForm showAlert={showAlert} heading="Enter the text to analyze below" mode={mode}/>
       {/* </Route> */}
   {/* </Switch> */}
+  {/*  */}
  </div>
   {/* </Router> */}
  
